@@ -11,6 +11,9 @@
 bin/
 target/
 out/
+*.class
+*.jar
+
 
 # Logs and reports
 *.log
