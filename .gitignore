@@ -1,0 +1,36 @@
+# Eclipse settings
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA (if someone uses it)
+.idea/
+*.iml
+
+# Build directories
+bin/
+target/
+out/
+
+# Logs and reports
+*.log
+*.tmp
+*.swp
+reports/
+test-output/
+surefire-reports/
+extent-reports/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Dependency cache
+.mvn/
+.gradle/
+node_modules/
+
+# Personal/Environment configs
+*.env
+*.local
+
