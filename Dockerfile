@@ -1,18 +1,15 @@
-# Use official OpenJDK image
-FROM openjdk:20-jdk
+# Use Eclipse Temurin JDK
+FROM eclipse-temurin:21-jdk
 
 # Set working directory
 WORKDIR /app
 
-# Copy source code
-COPY src ./src
+# Copy everything
+COPY . .
 
-# Create bin folder and compile
-RUN mkdir bin
-RUN javac src/HelloWorld.java -d bin
+# Compile Java source files
+RUN mkdir -p bin
+RUN javac -d bin src/*.java
 
-# Set working directory for execution
-WORKDIR /app/bin
-
-# Run Java program
-CMD ["java", "HelloWorld"]
+# Run Hello.class when container starts
+CMD ["java", "-cp", "bin", "Hello"]
